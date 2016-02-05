@@ -7,7 +7,9 @@ bundlebee({ entry } => {
     .include(['src/**/*.js'], babel())
     .include(['styles/**/*.less'], [less(), cssModules()]);
 }).then(bundle => {
-  bundle.write('dist/myBundle.js');
+  bundle.use('webpack').write('dist/myBundle.js');
+  // Or if you want just the config:
+  // bundle.use('webpack').generateConfig('webpack.config.js');
 }).catch(err => {
   console.log('Oh noes, something went wrong.');
   console.log(err);

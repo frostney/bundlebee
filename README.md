@@ -6,5 +6,10 @@ bundlebee({ entry } => {
   return entry('./main.js')
     .include(['src/**/*.js'], babel())
     .include(['styles/**/*.less'], [less(), cssModules()]);
+}).then(bundle => {
+  bundle.write('dist/myBundle.js');
+}).catch(err => {
+  console.log('Oh noes, something went wrong.');
+  console.log(err);
 });
 ```

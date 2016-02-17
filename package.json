@@ -1,0 +1,29 @@
+{
+  "name": "bundlebee",
+  "version": "1.0.0",
+  "description": "Create bundles with a simple interface independant of the bundler",
+  "main": "dist/bundlebee.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frostney/bundlebee.git"
+  },
+  "keywords": [
+    "bundle",
+    "bundler",
+    "cmake",
+    "make",
+    "config"
+  ],
+  "author": "Johannes Stein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frostney/bundlebee/issues"
+  },
+  "homepage": "https://github.com/frostney/bundlebee#readme",
+  "dependencies": {
+    "minimatch": "^3.0.0"
+  }
+}

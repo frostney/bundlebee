@@ -7,26 +7,22 @@ class WebpackBundle {
 
   generateConfig() {
     const loaders = this.entry.files.map(function(file) {
-      return {
-        test: globToRegExp(file.files),
-        loader: file.transform
-      }
+      return `{
+        test: ${globToRegExp(file.files).toString()},
+        loader: "${file.transform}"
+      }`;
     });
 
-    const config = {};
+    return `
+      module.exports = {
+        ${(this.entry.header) ? (JSON.stringify(this.entry.header) + ', ') : ''}
 
-    config.entry = this.entry.entryFile;
-    if (!this.entry.header) {
+        entry: "${this.entry.entryFile}",
+        loaders: [${loaders.join(', \n')}]
 
-    }
-
-    config.loaders = loaders;
-
-    return JSON.stringify(config, function(key, value) {
-      if (value instanceof RegExp) {
-        return value.toString();
-      }
-    }, 4);
+        ${(this.entry.footer) ? (',\n' + JSON.stringify(this.entry.footer)) : ''}
+      };
+    `;
   }
 }
 

@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/frostney/bundlebee#readme",
   "dependencies": {
-    "minimatch": "^3.0.0"
+    "glob-to-regexp": "^0.1.0"
   },
   "devDependencies": {
     "babel-preset-es2015-loose-rollup": "^7.0.0",

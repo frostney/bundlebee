@@ -1,6 +1,6 @@
 {
   "name": "bundlebee",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Create bundles with a simple interface independant of the bundler",
   "main": "dist/bundlebee.js",
   "scripts": {

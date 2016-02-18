@@ -4,6 +4,7 @@
   "description": "Create bundles with a simple interface independant of the bundler",
   "main": "dist/bundlebee.js",
   "scripts": {
+    "build": "rollup-babel-lib-bundler src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,10 @@
     "make",
     "config"
   ],
+  "files": [
+    "dist",
+    "src"
+  ],
   "author": "Johannes Stein",
   "license": "MIT",
   "bugs": {
@@ -25,5 +30,9 @@
   "homepage": "https://github.com/frostney/bundlebee#readme",
   "dependencies": {
     "minimatch": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-loose-rollup": "^7.0.0",
+    "rollup-babel-lib-bundler": "^2.1.1"
   }
 }
